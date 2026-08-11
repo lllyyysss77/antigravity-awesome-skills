@@ -1,0 +1,752 @@
+# Instincts generated from https://github.com/lllyyysss77/antigravity-awesome-skills
+# Generated: 2026-06-01T07:50:17.115Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: antigravity-awesome-skills-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore, fix, docs, meta, feat
+
+## Evidence
+
+- 100 commits analyzed
+- Detected conventional commit pattern
+- Examples: fix(plugin): Correct Claude marketplace source path, docs(release): Prepare 8.2.0 documentation
+
+---
+id: antigravity-awesome-skills-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Commit Length
+
+## Action
+
+Keep commit messages concise (~45 characters)
+
+## Evidence
+
+- Average commit message length: 45 chars
+- Based on 100 commits
+
+---
+id: antigravity-awesome-skills-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: antigravity-awesome-skills-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: antigravity-awesome-skills-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: antigravity-awesome-skills-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: antigravity-awesome-skills-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Test Framework
+
+## Action
+
+Use vitest as the test framework
+
+## Evidence
+
+- Test framework detected: vitest
+- File pattern: *.test.js
+
+---
+id: antigravity-awesome-skills-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.js
+
+## Evidence
+
+- File pattern: *.test.js
+- Consistent across test files
+
+---
+id: antigravity-awesome-skills-test-mocking
+trigger: "when mocking dependencies in tests"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Test Mocking
+
+## Action
+
+Use vi.mock for mocking
+
+## Evidence
+
+- Mocking pattern detected: vi.mock
+- Consistent across test files
+
+---
+id: antigravity-awesome-skills-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: yes
+
+---
+id: antigravity-awesome-skills-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~12x per month
+- Files: apps/web-app/src/hooks/__tests__/*, apps/web-app/src/hooks/*, apps/web-app/src/lib/*
+
+---
+id: antigravity-awesome-skills-workflow-add-or-update-skill-metadata
+trigger: "when doing add or update skill metadata"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Workflow Add Or Update Skill Metadata
+
+## Action
+
+Follow the add-or-update-skill-metadata workflow:
+1. Create or update skills/<skill-name>/SKILL.md
+2. Optionally add or update reference files in skills/<skill-name>/references/
+3. Optionally add or update scripts in skills/<skill-name>/scripts/
+4. Optionally update skills_index.json and/or CATALOG.md via registry sync
+5. Optionally run or update metadata fixer scripts
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: skills/*/SKILL.md, skills/*/references/*.md, skills/*/scripts/*.py
+
+---
+id: antigravity-awesome-skills-workflow-release-version-workflow
+trigger: "when doing release version workflow"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Workflow Release Version Workflow
+
+## Action
+
+Follow the release-version-workflow workflow:
+1. Update CHANGELOG.md with new version notes
+2. Update README.md with release messaging and acknowledgements
+3. Update docs/users/getting-started.md and related user docs
+4. Update package.json version
+5. Update package-lock.json to sync lockfile version
+6. Sync generated registry files (CATALOG.md, skills_index.json, data/catalog.json, etc.)
+7. Document release in walkthroughs and maintenance docs
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: CHANGELOG.md, README.md, docs/users/getting-started.md
+
+---
+id: antigravity-awesome-skills-workflow-sync-generated-registry-files
+trigger: "when doing sync generated registry files"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Workflow Sync Generated Registry Files
+
+## Action
+
+Follow the sync-generated-registry-files workflow:
+1. Run scripts to regenerate CATALOG.md, skills_index.json, data/catalog.json, data/bundles.json
+2. Update README.md with registry sync comment if needed
+3. Commit only generated files with [ci skip] if no code changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: CATALOG.md, skills_index.json, data/catalog.json
+
+---
+id: antigravity-awesome-skills-workflow-add-or-update-github-templates-and-community-files
+trigger: "when doing add or update github templates and community files"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Workflow Add Or Update Github Templates And Community Files
+
+## Action
+
+Follow the add-or-update-github-templates-and-community-files workflow:
+1. Add or update files in .github/ISSUE_TEMPLATE/ and .github/DISCUSSION_TEMPLATE/
+2. Update CONTRIBUTING.md and/or CODE_OF_CONDUCT.md
+3. Update README.md to reflect new community links or standards
+4. Optionally update docs/COMMUNITY_GUIDELINES.md
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .github/ISSUE_TEMPLATE/*, .github/DISCUSSION_TEMPLATE/*, CONTRIBUTING.md
+
+---
+id: antigravity-awesome-skills-workflow-security-hardening-and-fix-workflow
+trigger: "when doing security hardening and fix workflow"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Workflow Security Hardening And Fix Workflow
+
+## Action
+
+Follow the security-hardening-and-fix-workflow workflow:
+1. Update package.json and package-lock.json to pin safe dependencies
+2. Update scripts or code paths to remediate vulnerabilities
+3. Add or update regression/security tests in tools/scripts/tests/ or apps/web-app/src/__tests__/
+4. Document changes in security triage or maintenance docs
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: package.json, package-lock.json, skills/*/scripts/*.py
+
+---
+id: antigravity-awesome-skills-workflow-web-app-feature-or-bugfix-with-tests
+trigger: "when doing web app feature or bugfix with tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Workflow Web App Feature Or Bugfix With Tests
+
+## Action
+
+Follow the web-app-feature-or-bugfix-with-tests workflow:
+1. Update or add implementation files in apps/web-app/src/
+2. Update or add tests in apps/web-app/src/__tests__/ or apps/web-app/src/pages/__tests__/
+3. Update public assets or scripts if needed
+4. Optionally update README.md or user docs
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: apps/web-app/src/**/*.ts, apps/web-app/src/**/*.tsx, apps/web-app/src/__tests__/*
+
+---
+id: antigravity-awesome-skills-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct File Naming
+
+## Action
+
+Name files using PascalCase (e.g., MyFile.py)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files: PascalCase
+
+---
+id: antigravity-awesome-skills-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Function Naming
+
+## Action
+
+Use camelCase for function names (e.g., doSomething)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions: camelCase
+
+---
+id: antigravity-awesome-skills-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names (e.g., MyClass)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes: PascalCase
+
+---
+id: antigravity-awesome-skills-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names (e.g., MAX_SIZE)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: antigravity-awesome-skills-instinct-import-style
+trigger: "When importing modules in Python code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codeStyle.importStyle: relative
+
+---
+id: antigravity-awesome-skills-instinct-export-style
+trigger: "When exporting symbols from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle: named
+
+---
+id: antigravity-awesome-skills-instinct-test-file-pattern
+trigger: "When creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Test File Pattern
+
+## Action
+
+Name test files with the pattern *.test.js
+
+## Evidence
+
+- Pattern in testing.filePattern: *.test.js
+
+---
+id: antigravity-awesome-skills-instinct-test-framework
+trigger: "When writing tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Test Framework
+
+## Action
+
+Use the Vitest testing framework
+
+## Evidence
+
+- Pattern in testing.framework: vitest
+
+---
+id: antigravity-awesome-skills-instinct-test-types
+trigger: "When planning tests for new code"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Test Types
+
+## Action
+
+Write both unit and integration tests as appropriate
+
+## Evidence
+
+- Pattern in testing.testTypes: unit, integration
+
+---
+id: antigravity-awesome-skills-instinct-mocking-style
+trigger: "When mocking dependencies in tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Mocking Style
+
+## Action
+
+Use vi.mock for mocking in tests
+
+## Evidence
+
+- Pattern in testing.mockingStyle: vi.mock
+
+---
+id: antigravity-awesome-skills-instinct-coverage-config
+trigger: "When configuring tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Coverage Config
+
+## Action
+
+Enable and maintain test coverage configuration
+
+## Evidence
+
+- Pattern in testing.coverageConfig: true
+
+---
+id: antigravity-awesome-skills-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Commit Format
+
+## Action
+
+Use Conventional Commits format with prefixes chore, fix, docs, meta, or feat, and a scope if applicable (e.g., fix(plugin): ...)
+
+## Evidence
+
+- Seen in commit: fix(plugin): Correct Claude marketplace source path
+- Pattern in commits.prefixes: chore, fix, docs, meta, feat
+
+---
+id: antigravity-awesome-skills-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, averaging around 45 characters
+
+## Evidence
+
+- Pattern in commits.averageLength: 45
+
+---
+id: antigravity-awesome-skills-instinct-add-skill-metadata
+trigger: "When someone wants to add a new skill or fix metadata for an existing skill"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Add Skill Metadata
+
+## Action
+
+Create or update skills/<skill-name>/SKILL.md, update references/scripts, and sync skills_index.json and CATALOG.md as needed
+
+## Evidence
+
+- Workflow: add-or-update-skill-metadata
+- Files: skills/*/SKILL.md, skills/*/references/*.md, skills/*/scripts/*.py, skills_index.json, CATALOG.md
+
+---
+id: antigravity-awesome-skills-instinct-release-version
+trigger: "When someone wants to cut a new release version"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Release Version
+
+## Action
+
+Update CHANGELOG.md, README.md, user docs, package.json, package-lock.json, sync registry files, and document the release
+
+## Evidence
+
+- Workflow: release-version-workflow
+- Files: CHANGELOG.md, README.md, docs/users/getting-started.md, package.json, package-lock.json, CATALOG.md, skills_index.json, data/catalog.json
+
+---
+id: antigravity-awesome-skills-instinct-sync-registry
+trigger: "When someone adds/updates skills or metadata and needs the registry to reflect the current state"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Sync Registry
+
+## Action
+
+Regenerate and commit CATALOG.md, skills_index.json, data/catalog.json, data/bundles.json, and update README.md if needed
+
+## Evidence
+
+- Workflow: sync-generated-registry-files
+- Files: CATALOG.md, skills_index.json, data/catalog.json, data/bundles.json, README.md
+
+---
+id: antigravity-awesome-skills-instinct-add-github-templates
+trigger: "When someone wants to improve or add community and contribution documentation"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Add Github Templates
+
+## Action
+
+Add or update files in .github/ISSUE_TEMPLATE/, .github/DISCUSSION_TEMPLATE/, CONTRIBUTING.md, CODE_OF_CONDUCT.md, README.md, and optionally docs/COMMUNITY_GUIDELINES.md
+
+## Evidence
+
+- Workflow: add-or-update-github-templates-and-community-files
+- Files: .github/ISSUE_TEMPLATE/*, .github/DISCUSSION_TEMPLATE/*, CONTRIBUTING.md, CODE_OF_CONDUCT.md, README.md, docs/COMMUNITY_GUIDELINES.md
+
+---
+id: antigravity-awesome-skills-instinct-security-fix
+trigger: "When someone wants to fix security vulnerabilities or improve security posture"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Security Fix
+
+## Action
+
+Update dependencies, remediate vulnerable scripts, add regression/security tests, and document changes in security triage docs
+
+## Evidence
+
+- Workflow: security-hardening-and-fix-workflow
+- Files: package.json, package-lock.json, skills/*/scripts/*.py, tools/scripts/tests/*security*.test.js, docs/maintainers/security-findings-triage-*.md
+
+---
+id: antigravity-awesome-skills-instinct-webapp-feature-bugfix
+trigger: "When someone adds a new feature or fixes a bug in the web app"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/antigravity-awesome-skills
+---
+
+# Antigravity Awesome Skills Instinct Webapp Feature Bugfix
+
+## Action
+
+Update or add implementation files in apps/web-app/src/, add relevant tests, update public assets/scripts, and optionally update README.md or user docs
+
+## Evidence
+
+- Workflow: web-app-feature-or-bugfix-with-tests
+- Files: apps/web-app/src/**/*.ts, apps/web-app/src/**/*.tsx, apps/web-app/src/__tests__/*, apps/web-app/src/pages/__tests__/*, apps/web-app/public/*, README.md
+
